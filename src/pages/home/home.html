@@ -1,36 +1,18 @@
 <ion-header>
-  <ion-navbar color="dark">
-    <ion-title>
-      Member Area
-    </ion-title>
-    <ion-buttons end>
-      <button ion-button (click)="logout()">
-        <ion-icon name="log-out"></ion-icon>
-      </button>
-    </ion-buttons>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Star Wars API</ion-title>
   </ion-navbar>
 </ion-header>
- 
-<ion-content class="home" padding>
-  <h3>Welcome inside, {{username}}!</h3>
-  Your Email is: {{email}}
-</ion-content>
 
-<ion-navbar *navbar>
-  <ion-title>
-    Home
-  </ion-title>
-</ion-navbar>
+<ion-content padding>
+  <h3>Star Wars</h3>
 
-<ion-content>
-  <div class="movie" *ngFor="let film of films"
-        (tap)="viewFilmDetail(film)"
-        [ngStyle]="{'background': getCover(film.episode_id) }">
-    <div class="title">
-      <h1 class="secondary-font">{{ film.title }}</h1>
-    </div>
-    <div class="episode">
-      <span>{{ film.episode_id | romanize }}</span>
-    </div>
-  </div>
+  
+  <button ion-button color="dark" menuToggle>Menu</button>
+
+  <img src="https://images.unsplash.com/photo-1459876947801-8879713c9b47?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+
 </ion-content>
